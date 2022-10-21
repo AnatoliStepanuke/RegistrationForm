@@ -56,15 +56,47 @@
 		DC27D3502902BE2C00E35AD0 /* RegistrationForm */ = {
 			isa = PBXGroup;
 			children = (
-				DC27D3512902BE2C00E35AD0 /* AppDelegate.swift */,
-				DC27D3532902BE2C00E35AD0 /* SceneDelegate.swift */,
-				DC27D3552902BE2C00E35AD0 /* ViewController.swift */,
-				DC27D3572902BE2C00E35AD0 /* Main.storyboard */,
-				DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */,
-				DC27D35C2902BE2E00E35AD0 /* LaunchScreen.storyboard */,
+				DC27D3682902D05100E35AD0 /* Assets */,
+				DC27D3662902D03200E35AD0 /* Controllers */,
+				DC27D3652902D01900E35AD0 /* Delegates */,
 				DC27D35F2902BE2E00E35AD0 /* Info.plist */,
+				DC27D3672902D04200E35AD0 /* Storyboards */,
 			);
 			path = RegistrationForm;
+			sourceTree = "<group>";
+		};
+		DC27D3652902D01900E35AD0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D3512902BE2C00E35AD0 /* AppDelegate.swift */,
+				DC27D3532902BE2C00E35AD0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		DC27D3662902D03200E35AD0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D3552902BE2C00E35AD0 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DC27D3672902D04200E35AD0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D35C2902BE2E00E35AD0 /* LaunchScreen.storyboard */,
+				DC27D3572902BE2C00E35AD0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DC27D3682902D05100E35AD0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,8 +325,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +334,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AnatoliStepanuke.RegistrationForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +356,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +365,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AnatoliStepanuke.RegistrationForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

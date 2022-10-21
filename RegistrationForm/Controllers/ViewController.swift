@@ -1,19 +1,11 @@
-//
-//  ViewController.swift
-//  RegistrationForm
-//
-//  Created by Anatoli on 21.10.2022.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    // MARK: - Constants
+    // MARK: - Properties
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .purple
     }
-
-
 }
-

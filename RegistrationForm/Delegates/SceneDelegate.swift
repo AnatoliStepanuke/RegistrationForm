@@ -1,8 +1,11 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    // MARK: - Constants
+    // MARK: - Properties
     var window: UIWindow?
+
+    // MARK: - Constants
+    private let rootViewController = ViewController()
 
     // MARK: - UIScene
     func scene(
@@ -11,8 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
-        let tabBarViewController = ViewController()
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }

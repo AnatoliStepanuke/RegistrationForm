@@ -12,6 +12,7 @@
 		DC27D3562902BE2C00E35AD0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D3552902BE2C00E35AD0 /* RegistrationViewController.swift */; };
 		DC27D35B2902BE2E00E35AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */; };
 		DC27D35E2902BE2E00E35AD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC27D35C2902BE2E00E35AD0 /* LaunchScreen.storyboard */; };
+		DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC27D35D2902BE2E00E35AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC27D35F2902BE2E00E35AD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		DC27D3502902BE2C00E35AD0 /* RegistrationForm */ = {
 			isa = PBXGroup;
 			children = (
+				DC27D36A2904570300E35AD0 /* Extensions */,
 				DC27D3682902D05100E35AD0 /* Assets */,
 				DC27D3662902D03200E35AD0 /* Controllers */,
 				DC27D3652902D01900E35AD0 /* Delegates */,
@@ -94,6 +97,14 @@
 				DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		DC27D36A2904570300E35AD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				DC27D3562902BE2C00E35AD0 /* RegistrationViewController.swift in Sources */,
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
 				DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */,
+				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

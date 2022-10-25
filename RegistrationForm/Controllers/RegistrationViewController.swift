@@ -69,7 +69,7 @@ final class RegistrationViewController: UIViewController {
         emailLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
         emailLabel.font = UIFont(name: "HelveticaNeueCyr-Roman", size: 14)
         emailLabel.text = "Email"
-        emailLabel.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        emailLabel.textColor = AppColors.whiteColor
     }
 
     private func setupEmailTextField() {
@@ -86,7 +86,7 @@ final class RegistrationViewController: UIViewController {
             string: "введите электронную почту",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
         )
-        emailTextField.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        emailTextField.textColor = AppColors.whiteColor
     }
 
     private func setupPasswordLabel() {
@@ -100,7 +100,7 @@ final class RegistrationViewController: UIViewController {
         passwordLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
         passwordLabel.font = UIFont(name: "HelveticaNeueCyr-Roman", size: 14)
         passwordLabel.text = "Пароль"
-        passwordLabel.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        passwordLabel.textColor = AppColors.whiteColor
     }
 
     private func setupPasswordTextField() {
@@ -117,6 +117,6 @@ final class RegistrationViewController: UIViewController {
             string: "введите пароль",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
         )
-        passwordTextField.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        passwordTextField.textColor = AppColors.whiteColor
     }
 }

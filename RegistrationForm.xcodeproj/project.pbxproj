@@ -13,6 +13,7 @@
 		DC27D35B2902BE2E00E35AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */; };
 		DC27D35E2902BE2E00E35AD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC27D35C2902BE2E00E35AD0 /* LaunchScreen.storyboard */; };
 		DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */; };
+		DC54186029083FA800D727BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54185F29083FA800D727BC /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DC27D35D2902BE2E00E35AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC27D35F2902BE2E00E35AD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
+		DC54185F29083FA800D727BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */,
+				DC54185F29083FA800D727BC /* Colors.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC27D3562902BE2C00E35AD0 /* RegistrationViewController.swift in Sources */,
+				DC54186029083FA800D727BC /* Colors.swift in Sources */,
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
 				DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */,
 				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,

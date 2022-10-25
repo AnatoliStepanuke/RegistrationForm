@@ -11,8 +11,14 @@ final class RegistrationViewController: UIViewController {
     private let logoImageView = UIImageView()
 
     // UITextField
-    private let emailTextField = UITextField()
-    private let passwordTextField = UITextField()
+    private let emailTextField = RegistrationUITextField(
+        autocapitalizationType: .none,
+        keyboardType: .emailAddress
+    )
+    private let passwordTextField = RegistrationUITextField(
+        autocapitalizationType: .words,
+        keyboardType: .default
+    )
 
     // UILabel
     private let emailLabel = UILabel()
@@ -80,7 +86,6 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
-        emailTextField.heightAnchor.constraint(equalToConstant: 16).isActive = true
         emailTextField.font = AppFonts.HelveticaNeueCyrMedium
         emailTextField.attributedPlaceholder = NSAttributedString(
             string: "введите электронную почту",
@@ -111,7 +116,6 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
-        passwordTextField.heightAnchor.constraint(equalToConstant: 16).isActive = true
         passwordTextField.font = AppFonts.HelveticaNeueCyrMedium
         passwordTextField.attributedPlaceholder = NSAttributedString(
             string: "введите пароль",

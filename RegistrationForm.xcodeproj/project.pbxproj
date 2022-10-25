@@ -15,6 +15,7 @@
 		DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */; };
 		DC54186029083FA800D727BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54185F29083FA800D727BC /* Colors.swift */; };
 		DC5418622908412300D727BC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5418612908412300D727BC /* Fonts.swift */; };
+		DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC541865290844A600D727BC /* RegistrationUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		DC54185F29083FA800D727BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC5418612908412300D727BC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DC541865290844A600D727BC /* RegistrationUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				DC27D3682902D05100E35AD0 /* Assets */,
 				DC27D3662902D03200E35AD0 /* Controllers */,
+				DC5418632908447300D727BC /* Custom */,
 				DC27D3652902D01900E35AD0 /* Delegates */,
 				DC27D36A2904570300E35AD0 /* Extensions */,
 				DC27D35F2902BE2E00E35AD0 /* Info.plist */,
@@ -111,6 +114,22 @@
 				DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC5418632908447300D727BC /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DC5418642908448700D727BC /* UITextField */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		DC5418642908448700D727BC /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				DC541865290844A600D727BC /* RegistrationUITextField.swift */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +229,7 @@
 				DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */,
 				DC5418622908412300D727BC /* Fonts.swift in Sources */,
 				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,
+				DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

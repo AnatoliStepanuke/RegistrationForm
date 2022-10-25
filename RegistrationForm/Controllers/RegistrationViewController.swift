@@ -67,7 +67,7 @@ final class RegistrationViewController: UIViewController {
             padding: .init(top: 100, left: 20, bottom: 0, right: 20)
         )
         emailLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        emailLabel.font = UIFont(name: "HelveticaNeueCyr-Roman", size: 14)
+        emailLabel.font = AppFonts.HelveticaNeueCyrRoman
         emailLabel.text = "Email"
         emailLabel.textColor = AppColors.whiteColor
     }
@@ -81,7 +81,7 @@ final class RegistrationViewController: UIViewController {
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
         emailTextField.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        emailTextField.font = UIFont(name: "HelveticaNeueCyr-Medium", size: 14)
+        emailTextField.font = AppFonts.HelveticaNeueCyrMedium
         emailTextField.attributedPlaceholder = NSAttributedString(
             string: "введите электронную почту",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
@@ -98,7 +98,7 @@ final class RegistrationViewController: UIViewController {
             padding: .init(top: 30, left: 20, bottom: 0, right: 20)
         )
         passwordLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        passwordLabel.font = UIFont(name: "HelveticaNeueCyr-Roman", size: 14)
+        passwordLabel.font = AppFonts.HelveticaNeueCyrRoman
         passwordLabel.text = "Пароль"
         passwordLabel.textColor = AppColors.whiteColor
     }
@@ -112,7 +112,7 @@ final class RegistrationViewController: UIViewController {
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
         passwordTextField.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        passwordTextField.font = UIFont(name: "HelveticaNeueCyr-Medium", size: 14)
+        passwordTextField.font = AppFonts.HelveticaNeueCyrMedium
         passwordTextField.attributedPlaceholder = NSAttributedString(
             string: "введите пароль",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]

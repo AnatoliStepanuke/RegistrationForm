@@ -12,10 +12,16 @@ final class RegistrationViewController: UIViewController {
 
     // UITextField
     private let emailTextField = RegistrationUITextField(
+        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 16, weight: .medium),
+        placeholder: "введите электронную почту",
+        textColor: AppColors.whiteColor,
         autocapitalizationType: .none,
         keyboardType: .emailAddress
     )
     private let passwordTextField = RegistrationUITextField(
+        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 16, weight: .medium),
+        placeholder: "введите пароль",
+        textColor: AppColors.whiteColor,
         autocapitalizationType: .words,
         keyboardType: .default
     )
@@ -86,12 +92,6 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
-        emailTextField.font = AppFonts.HelveticaNeueCyrMedium
-        emailTextField.attributedPlaceholder = NSAttributedString(
-            string: "введите электронную почту",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
-        )
-        emailTextField.textColor = AppColors.whiteColor
     }
 
     private func setupPasswordLabel() {
@@ -116,11 +116,5 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
-        passwordTextField.font = AppFonts.HelveticaNeueCyrMedium
-        passwordTextField.attributedPlaceholder = NSAttributedString(
-            string: "введите пароль",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
-        )
-        passwordTextField.textColor = AppColors.whiteColor
     }
 }

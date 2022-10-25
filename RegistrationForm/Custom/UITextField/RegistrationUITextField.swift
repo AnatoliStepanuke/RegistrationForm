@@ -4,11 +4,15 @@ final class RegistrationUITextField: UITextField {
     // MARK: - Init
     init(
         height: CGFloat = 16,
+        font: UIFont,
+        placeholder: String,
+        textColor: UIColor,
         autocapitalizationType: UITextAutocapitalizationType,
         keyboardType: UIKeyboardType
     ) {
         super.init(frame: .zero)
         setupHeight(height: height)
+        setupText(font: font, placeholder: placeholder, textColor: textColor)
 //        setupIcon(
 //            iconName: iconName,
 //            iconPositionX: iconPositionX,
@@ -33,6 +37,15 @@ final class RegistrationUITextField: UITextField {
     // MARK: - Setups
     private func setupHeight(height: CGFloat) {
         heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+
+    private func setupText(font: UIFont, placeholder: String, textColor: UIColor) {
+        self.font = font
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+        )
+        self.textColor = textColor
     }
 
 //    private func setupIcon(

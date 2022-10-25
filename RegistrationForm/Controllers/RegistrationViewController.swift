@@ -12,9 +12,11 @@ final class RegistrationViewController: UIViewController {
 
     // UITextField
     private let emailTextField = UITextField()
+    private let passwordTextField = UITextField()
 
     // UILabel
     private let emailLabel = UILabel()
+    private let passwordLabel = UILabel()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -25,6 +27,8 @@ final class RegistrationViewController: UIViewController {
         setupLogoImageView()
         setupEmailLabel()
         setupEmailTextField()
+        setupPasswordLabel()
+        setupPasswordTextField()
     }
 
     // MARK: - Setups
@@ -33,6 +37,8 @@ final class RegistrationViewController: UIViewController {
         view.addSubview(logoImageView)
         view.addSubview(emailLabel)
         view.addSubview(emailTextField)
+        view.addSubview(passwordLabel)
+        view.addSubview(passwordTextField)
     }
 
     private func setupBackgroundImageView() {
@@ -81,5 +87,36 @@ final class RegistrationViewController: UIViewController {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
         )
         emailTextField.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    }
+
+    private func setupPasswordLabel() {
+        passwordLabel.anchor(
+            top: emailTextField.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 30, left: 20, bottom: 0, right: 20)
+        )
+        passwordLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        passwordLabel.font = UIFont(name: "HelveticaNeueCyr-Roman", size: 14)
+        passwordLabel.text = "Пароль"
+        passwordLabel.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    }
+
+    private func setupPasswordTextField() {
+        passwordTextField.anchor(
+            top: passwordLabel.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 12, left: 20, bottom: 0, right: 20)
+        )
+        passwordTextField.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        passwordTextField.font = UIFont(name: "HelveticaNeueCyr-Medium", size: 14)
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "введите пароль",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+        )
+        passwordTextField.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
     }
 }

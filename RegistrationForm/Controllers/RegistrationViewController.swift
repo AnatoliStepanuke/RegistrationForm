@@ -22,6 +22,7 @@ final class RegistrationViewController: UIViewController {
         font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 16, weight: .medium),
         placeholder: "введите пароль",
         textColor: AppColors.whiteColor,
+        iconName: "view",
         autocapitalizationType: .words,
         keyboardType: .default
     )

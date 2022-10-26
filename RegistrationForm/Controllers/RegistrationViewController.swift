@@ -12,14 +12,14 @@ final class RegistrationViewController: UIViewController {
 
     // UITextField
     private let emailTextField = RegistrationUITextField(
-        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 16, weight: .medium),
+        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: "введите электронную почту",
         textColor: AppColors.whiteColor,
         autocapitalizationType: .none,
         keyboardType: .emailAddress
     )
     private let passwordTextField = RegistrationUITextField(
-        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 16, weight: .medium),
+        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: "введите пароль",
         textColor: AppColors.whiteColor,
         iconName: "view",
@@ -28,8 +28,16 @@ final class RegistrationViewController: UIViewController {
     )
 
     // UILabel
-    private let emailLabel = UILabel()
-    private let passwordLabel = UILabel()
+    private let emailLabel = RegistrationUILabel(
+        text: "Email",
+        font: AppFonts.HelveticaNeueCyrRoman ?? .systemFont(ofSize: 14, weight: .regular),
+        textColor: AppColors.whiteColor
+    )
+    private let passwordLabel = RegistrationUILabel(
+        text: "Пароль",
+        font: AppFonts.HelveticaNeueCyrRoman ?? .systemFont(ofSize: 14, weight: .regular),
+        textColor: AppColors.whiteColor
+    )
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -79,10 +87,6 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 100, left: 20, bottom: 0, right: 20)
         )
-        emailLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        emailLabel.font = AppFonts.HelveticaNeueCyrRoman
-        emailLabel.text = "Email"
-        emailLabel.textColor = AppColors.whiteColor
     }
 
     private func setupEmailTextField() {
@@ -103,10 +107,6 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 30, left: 20, bottom: 0, right: 20)
         )
-        passwordLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        passwordLabel.font = AppFonts.HelveticaNeueCyrRoman
-        passwordLabel.text = "Пароль"
-        passwordLabel.textColor = AppColors.whiteColor
     }
 
     private func setupPasswordTextField() {

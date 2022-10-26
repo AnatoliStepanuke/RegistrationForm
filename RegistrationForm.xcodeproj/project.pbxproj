@@ -16,6 +16,7 @@
 		DC54186029083FA800D727BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54185F29083FA800D727BC /* Colors.swift */; };
 		DC5418622908412300D727BC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5418612908412300D727BC /* Fonts.swift */; };
 		DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC541865290844A600D727BC /* RegistrationUITextField.swift */; };
+		DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DC54185F29083FA800D727BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC5418612908412300D727BC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		DC541865290844A600D727BC /* RegistrationUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITextField.swift; sourceTree = "<group>"; };
+		DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		DC5418632908447300D727BC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DCD53BD22909451D002F36E2 /* UILabel */,
 				DC5418642908448700D727BC /* UITextField */,
 			);
 			path = Custom;
@@ -130,6 +133,14 @@
 				DC541865290844A600D727BC /* RegistrationUITextField.swift */,
 			);
 			path = UITextField;
+			sourceTree = "<group>";
+		};
+		DCD53BD22909451D002F36E2 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
 				DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */,
 				DC5418622908412300D727BC /* Fonts.swift in Sources */,
+				DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */,
 				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,
 				DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */,
 			);

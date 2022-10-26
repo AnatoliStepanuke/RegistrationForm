@@ -5,8 +5,8 @@ final class RegistrationUILabel: UILabel {
     init(
         height: CGFloat = 16,
         text: String,
-        font: UIFont,
-        textColor: UIColor
+        font: UIFont = AppFonts.HelveticaNeueCyrRoman ?? .systemFont(ofSize: 14, weight: .regular),
+        textColor: UIColor = AppColors.whiteColor
     ) {
         super.init(frame: .zero)
         setupConstraintsExploreUILabel(height: height)

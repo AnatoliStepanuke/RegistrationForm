@@ -4,9 +4,9 @@ final class RegistrationUITextField: UITextField {
     // MARK: - Init
     init(
         height: CGFloat = 16,
-        font: UIFont,
+        font: UIFont = AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: String,
-        textColor: UIColor,
+        textColor: UIColor = AppColors.whiteColor,
         iconName: String? = "",
         iconPositionX: Int? = 0,
         iconPositionY: Int? = 0,

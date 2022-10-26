@@ -12,32 +12,20 @@ final class RegistrationViewController: UIViewController {
 
     // UITextField
     private let emailTextField = RegistrationUITextField(
-        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: "введите электронную почту",
-        textColor: AppColors.whiteColor,
         autocapitalizationType: .none,
         keyboardType: .emailAddress
     )
     private let passwordTextField = RegistrationUITextField(
-        font: AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: "введите пароль",
-        textColor: AppColors.whiteColor,
         iconName: "view",
         autocapitalizationType: .words,
         keyboardType: .default
     )
 
     // UILabel
-    private let emailLabel = RegistrationUILabel(
-        text: "Email",
-        font: AppFonts.HelveticaNeueCyrRoman ?? .systemFont(ofSize: 14, weight: .regular),
-        textColor: AppColors.whiteColor
-    )
-    private let passwordLabel = RegistrationUILabel(
-        text: "Пароль",
-        font: AppFonts.HelveticaNeueCyrRoman ?? .systemFont(ofSize: 14, weight: .regular),
-        textColor: AppColors.whiteColor
-    )
+    private let emailLabel = RegistrationUILabel(text: "Email")
+    private let passwordLabel = RegistrationUILabel(text: "Пароль")
 
     // MARK: - Properties
     // MARK: - Lifecycle

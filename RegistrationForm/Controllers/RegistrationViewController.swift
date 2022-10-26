@@ -27,6 +27,9 @@ final class RegistrationViewController: UIViewController {
     private let emailLabel = RegistrationUILabel(text: "Email")
     private let passwordLabel = RegistrationUILabel(text: "Пароль")
 
+    // UIButton
+    private let registrationButton = UIButton()
+
     // MARK: - Properties
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -38,6 +41,7 @@ final class RegistrationViewController: UIViewController {
         setupEmailTextField()
         setupPasswordLabel()
         setupPasswordTextField()
+        setupRegistrationButton()
     }
 
     // MARK: - Setups
@@ -48,6 +52,7 @@ final class RegistrationViewController: UIViewController {
         view.addSubview(emailTextField)
         view.addSubview(passwordLabel)
         view.addSubview(passwordTextField)
+        view.addSubview(registrationButton)
     }
 
     private func setupBackgroundImageView() {
@@ -105,5 +110,17 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 12, left: 20, bottom: 0, right: 20)
         )
+    }
+
+    private func setupRegistrationButton() {
+        registrationButton.anchor(
+            top: passwordTextField.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 40, left: 20, bottom: 0, right: 20)
+        )
+        registrationButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        registrationButton.setTitle("Регистрация", for: .normal)
     }
 }

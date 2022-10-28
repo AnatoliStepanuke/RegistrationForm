@@ -28,7 +28,7 @@ final class RegistrationViewController: UIViewController {
     private let passwordLabel = RegistrationUILabel(text: "Пароль")
 
     // UIButton
-    private let registrationButton = UIButton()
+    private let registrationButton = GradientButton()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -120,7 +120,5 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 40, left: 20, bottom: 0, right: 20)
         )
-        registrationButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        registrationButton.setTitle("Регистрация", for: .normal)
     }
 }

@@ -17,6 +17,8 @@
 		DC5418622908412300D727BC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5418612908412300D727BC /* Fonts.swift */; };
 		DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC541865290844A600D727BC /* RegistrationUITextField.swift */; };
 		DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */; };
+		DCD53BD629097960002F36E2 /* UIView+gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD529097960002F36E2 /* UIView+gradient.swift */; };
+		DCD53BD9290C45C0002F36E2 /* GradientUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD8290C45C0002F36E2 /* GradientUIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DC5418612908412300D727BC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		DC541865290844A600D727BC /* RegistrationUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITextField.swift; sourceTree = "<group>"; };
 		DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUILabel.swift; sourceTree = "<group>"; };
+		DCD53BD529097960002F36E2 /* UIView+gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+gradient.swift"; sourceTree = "<group>"; };
+		DCD53BD8290C45C0002F36E2 /* GradientUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */,
+				DCD53BD529097960002F36E2 /* UIView+gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		DC5418632908447300D727BC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DCD53BD7290C459E002F36E2 /* UIButton */,
 				DCD53BD22909451D002F36E2 /* UILabel */,
 				DC5418642908448700D727BC /* UITextField */,
 			);
@@ -141,6 +147,14 @@
 				DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		DCD53BD7290C459E002F36E2 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				DCD53BD8290C45C0002F36E2 /* GradientUIButton.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD53BD9290C45C0002F36E2 /* GradientUIButton.swift in Sources */,
 				DC27D3562902BE2C00E35AD0 /* RegistrationViewController.swift in Sources */,
 				DC54186029083FA800D727BC /* Colors.swift in Sources */,
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
@@ -242,6 +257,7 @@
 				DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */,
 				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,
 				DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */,
+				DCD53BD629097960002F36E2 /* UIView+gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

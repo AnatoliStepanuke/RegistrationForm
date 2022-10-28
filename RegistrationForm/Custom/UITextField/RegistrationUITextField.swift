@@ -4,10 +4,10 @@ final class RegistrationUITextField: UITextField {
     // MARK: - Init
     init(
         height: CGFloat = 16,
-        font: UIFont = AppFonts.HelveticaNeueCyrMedium ?? .systemFont(ofSize: 14, weight: .medium),
+        font: UIFont = AppFonts.HelveticaNeueCyrMedium14 ?? .systemFont(ofSize: 14, weight: .medium),
         placeholder: String,
         textColor: UIColor = AppColors.whiteColor,
-        iconName: String? = "",
+        iconName: String? = "'",
         iconPositionX: Int? = 0,
         iconPositionY: Int? = 0,
         iconWidth: Int? = 21,

@@ -9,8 +9,8 @@ final class RegistrationUILabel: UILabel {
         textColor: UIColor = AppColors.whiteColor
     ) {
         super.init(frame: .zero)
-        setupConstraintsExploreUILabel(height: height)
-        setupTextExploreUILabel(
+        setupConstraints(height: height)
+        setupText(
             text: text,
             font: font,
             textColor: textColor
@@ -22,11 +22,11 @@ final class RegistrationUILabel: UILabel {
     }
 
     // MARK: - Setups
-    private func setupConstraintsExploreUILabel(height: CGFloat) {
+    private func setupConstraints(height: CGFloat) {
         heightAnchor.constraint(equalToConstant: height).isActive = true
     }
 
-    private func setupTextExploreUILabel(
+    private func setupText(
         text: String,
         font: UIFont,
         textColor: UIColor

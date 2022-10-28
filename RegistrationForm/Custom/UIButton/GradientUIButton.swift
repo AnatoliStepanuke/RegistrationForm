@@ -2,20 +2,22 @@ import UIKit
 
 final class GradientButton: UIButton {
     // MARK: - Init
-    init() {
-        super.init(frame: .zero)
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setupConstraints()
+        setupCornerRadius()
         setupTitle()
         setupColors()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     // MARK: - Setups
     private func setupConstraints() {
         heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+
+    private func setupCornerRadius() {
+        layer.cornerRadius = 6
+        clipsToBounds = true
     }
 
     private func setupTitle() {

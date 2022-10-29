@@ -30,6 +30,10 @@ final class RegistrationViewController: UIViewController {
     // UIButton
     private let registrationButton = GradientButton()
 
+    // UIView
+    private let separatorView = SeparatorView(color: AppColors.whiteColor)
+    private let anotherSeparatorView = SeparatorView(color: AppColors.whiteColor)
+
     // MARK: - Properties
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -50,8 +54,10 @@ final class RegistrationViewController: UIViewController {
         view.addSubview(logoImageView)
         view.addSubview(emailLabel)
         view.addSubview(emailTextField)
+        view.addSubview(separatorView)
         view.addSubview(passwordLabel)
         view.addSubview(passwordTextField)
+        view.addSubview(anotherSeparatorView)
         view.addSubview(registrationButton)
     }
 
@@ -78,7 +84,7 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 100, left: 20, bottom: 0, right: 20)
+            padding: .init(top: 100, left: 25, bottom: 0, right: 25)
         )
     }
 
@@ -88,7 +94,14 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 12, left: 20, bottom: 0, right: 20)
+            padding: .init(top: 15, left: 25, bottom: 0, right: 25)
+        )
+        separatorView.anchor(
+            top: emailTextField.bottomAnchor,
+            leading: emailTextField.leadingAnchor,
+            trailing: emailTextField.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 20, left: 0, bottom: 0, right: 0)
         )
     }
 
@@ -98,7 +111,7 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 30, left: 20, bottom: 0, right: 20)
+            padding: .init(top: 50, left: 25, bottom: 0, right: 25)
         )
     }
 
@@ -108,7 +121,14 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 12, left: 20, bottom: 0, right: 20)
+            padding: .init(top: 15, left: 25, bottom: 0, right: 25)
+        )
+        anotherSeparatorView.anchor(
+            top: passwordTextField.bottomAnchor,
+            leading: passwordTextField.leadingAnchor,
+            trailing: passwordTextField.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 20, left: 0, bottom: 0, right: 0)
         )
     }
 
@@ -118,7 +138,7 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 40, left: 20, bottom: 0, right: 20)
+            padding: .init(top: 60, left: 25, bottom: 0, right: 25)
         )
     }
 }

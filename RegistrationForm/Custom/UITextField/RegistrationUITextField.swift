@@ -31,22 +31,16 @@ final class RegistrationUITextField: UITextField {
             viewPositionX: viewPositionX,
             viewPositionY: viewPositionY,
             viewWidth: viewWidth,
-            viewHeight: viewHeight
-        )
+            viewHeight: viewHeight)
         setupKeyboardType(
             autocapitalizationType: autocapitalizationType,
-            keyboardType: keyboardType
-        )
+            keyboardType: keyboardType)
     }
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+    required init?(coder: NSCoder) { super.init(coder: coder) }
 
     // MARK: - Setups
-    private func setupHeight(height: CGFloat) {
-        heightAnchor.constraint(equalToConstant: height).isActive = true
-    }
+    private func setupHeight(height: CGFloat) { heightAnchor.constraint(equalToConstant: height).isActive = true }
 
     private func setupText(font: UIFont, placeholder: String, textColor: UIColor) {
         self.font = font

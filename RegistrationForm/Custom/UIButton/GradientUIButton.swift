@@ -1,19 +1,17 @@
 import UIKit
 
-final class GradientButton: UIButton {
+final class RegistrationUIButton: UIButton {
     // MARK: - Init
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupConstraints()
+        setupHeight()
         setupCornerRadius()
         setupTitle()
         setupColors()
     }
 
     // MARK: - Setups
-    private func setupConstraints() {
-        heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
+    private func setupHeight() { heightAnchor.constraint(equalToConstant: 50).isActive = true }
 
     private func setupCornerRadius() {
         layer.cornerRadius = 6

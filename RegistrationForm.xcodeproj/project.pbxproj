@@ -19,6 +19,7 @@
 		DC7F042A290D55D80082A76F /* RegistrationSeparatorUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F0429290D55D80082A76F /* RegistrationSeparatorUIView.swift */; };
 		DC7F042C290D67290082A76F /* UIView+addingSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F042B290D67290082A76F /* UIView+addingSubviews.swift */; };
 		DC7F042E290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F042D290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift */; };
+		DC7F0431290D85C20082A76F /* RegistrationUIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F0430290D85C20082A76F /* RegistrationUIStackView.swift */; };
 		DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */; };
 		DCD53BD629097960002F36E2 /* UIView+gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD529097960002F36E2 /* UIView+gradient.swift */; };
 		DCD53BD9290C45C0002F36E2 /* GradientUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD53BD8290C45C0002F36E2 /* GradientUIButton.swift */; };
@@ -39,6 +40,7 @@
 		DC7F0429290D55D80082A76F /* RegistrationSeparatorUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSeparatorUIView.swift; sourceTree = "<group>"; };
 		DC7F042B290D67290082A76F /* UIView+addingSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addingSubviews.swift"; sourceTree = "<group>"; };
 		DC7F042D290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addingArrangedSubviews.swift"; sourceTree = "<group>"; };
+		DC7F0430290D85C20082A76F /* RegistrationUIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUIStackView.swift; sourceTree = "<group>"; };
 		DCD53BD32909453B002F36E2 /* RegistrationUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUILabel.swift; sourceTree = "<group>"; };
 		DCD53BD529097960002F36E2 /* UIView+gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+gradient.swift"; sourceTree = "<group>"; };
 		DCD53BD8290C45C0002F36E2 /* GradientUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIButton.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		DC5418632908447300D727BC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DC7F042F290D85AA0082A76F /* UIStackView */,
 				DCD53BD7290C459E002F36E2 /* UIButton */,
 				DCD53BD22909451D002F36E2 /* UILabel */,
 				DC5418642908448700D727BC /* UITextField */,
@@ -156,6 +159,14 @@
 				DC7F0429290D55D80082A76F /* RegistrationSeparatorUIView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		DC7F042F290D85AA0082A76F /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				DC7F0430290D85C20082A76F /* RegistrationUIStackView.swift */,
+			);
+			path = UIStackView;
 			sourceTree = "<group>";
 		};
 		DCD53BD22909451D002F36E2 /* UILabel */ = {
@@ -271,6 +282,7 @@
 				DC54186029083FA800D727BC /* Colors.swift in Sources */,
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
 				DC7F042C290D67290082A76F /* UIView+addingSubviews.swift in Sources */,
+				DC7F0431290D85C20082A76F /* RegistrationUIStackView.swift in Sources */,
 				DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */,
 				DC5418622908412300D727BC /* Fonts.swift in Sources */,
 				DCD53BD42909453B002F36E2 /* RegistrationUILabel.swift in Sources */,

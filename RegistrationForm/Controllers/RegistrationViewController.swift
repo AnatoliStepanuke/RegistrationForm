@@ -26,14 +26,14 @@ final class RegistrationViewController: UIViewController {
     private let passwordLabel = RegistrationUILabel(text: "Пароль")
 
     // UIButton
-    private let registrationButton = GradientButton()
+    private let registrationButton = RegistrationUIButton()
 
     // UIView
     private let emailSeparatorView = RegistrationSeparatorView(color: AppColors.whiteColor)
     private let passwordSeparatorView = RegistrationSeparatorView(color: AppColors.whiteColor)
 
     // UIStackView
-    private let registrationContainerStackView = UIStackView()
+    private let registrationContainerStackView = RegistrationUIStackView()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -73,8 +73,6 @@ final class RegistrationViewController: UIViewController {
     }
 
     private func setupContainerStackView() {
-        registrationContainerStackView.axis = .vertical
-        registrationContainerStackView.heightAnchor.constraint(equalToConstant: 180).isActive = true
         registrationContainerStackView.anchor(
             top: logoImageView.bottomAnchor,
             leading: view.leadingAnchor,
@@ -88,8 +86,6 @@ final class RegistrationViewController: UIViewController {
             passwordLabel,
             passwordTextField,
             passwordSeparatorView])
-        registrationContainerStackView.alignment = .fill
-        registrationContainerStackView.distribution = .equalSpacing
     }
 
     private func setupRegistrationButton() {

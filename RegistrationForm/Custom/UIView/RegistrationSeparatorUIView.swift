@@ -1,6 +1,6 @@
 import UIKit
 
-final class SeparatorView: UIView {
+final class RegistrationSeparatorView: UIView {
     // MARK: - Init
     init(color: UIColor) {
         super.init(frame: .zero)

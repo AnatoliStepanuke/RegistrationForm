@@ -31,8 +31,8 @@ final class RegistrationViewController: UIViewController {
     private let registrationButton = GradientButton()
 
     // UIView
-    private let separatorView = SeparatorView(color: AppColors.whiteColor)
-    private let anotherSeparatorView = SeparatorView(color: AppColors.whiteColor)
+    private let emailSeparatorView = RegistrationSeparatorView(color: AppColors.whiteColor)
+    private let passwordSeparatorView = RegistrationSeparatorView(color: AppColors.whiteColor)
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -54,10 +54,10 @@ final class RegistrationViewController: UIViewController {
         view.addSubview(logoImageView)
         view.addSubview(emailLabel)
         view.addSubview(emailTextField)
-        view.addSubview(separatorView)
+        view.addSubview(emailSeparatorView)
         view.addSubview(passwordLabel)
         view.addSubview(passwordTextField)
-        view.addSubview(anotherSeparatorView)
+        view.addSubview(passwordSeparatorView)
         view.addSubview(registrationButton)
     }
 
@@ -96,7 +96,7 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 15, left: 25, bottom: 0, right: 25)
         )
-        separatorView.anchor(
+        emailSeparatorView.anchor(
             top: emailTextField.bottomAnchor,
             leading: emailTextField.leadingAnchor,
             trailing: emailTextField.trailingAnchor,
@@ -107,11 +107,11 @@ final class RegistrationViewController: UIViewController {
 
     private func setupPasswordLabel() {
         passwordLabel.anchor(
-            top: emailTextField.bottomAnchor,
+            top: emailSeparatorView.bottomAnchor,
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 50, left: 25, bottom: 0, right: 25)
+            padding: .init(top: 25, left: 25, bottom: 0, right: 25)
         )
     }
 
@@ -123,7 +123,7 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 15, left: 25, bottom: 0, right: 25)
         )
-        anotherSeparatorView.anchor(
+        passwordSeparatorView.anchor(
             top: passwordTextField.bottomAnchor,
             leading: passwordTextField.leadingAnchor,
             trailing: passwordTextField.trailingAnchor,
@@ -134,11 +134,11 @@ final class RegistrationViewController: UIViewController {
 
     private func setupRegistrationButton() {
         registrationButton.anchor(
-            top: passwordTextField.bottomAnchor,
+            top: passwordSeparatorView.bottomAnchor,
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 60, left: 25, bottom: 0, right: 25)
+            padding: .init(top: 40, left: 25, bottom: 0, right: 25)
         )
     }
 }

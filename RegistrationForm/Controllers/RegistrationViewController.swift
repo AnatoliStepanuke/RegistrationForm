@@ -82,12 +82,12 @@ final class RegistrationViewController: UIViewController {
                                               trailing: view.trailingAnchor,
                                               bottom: nil,
                                               padding: .init(top: 100, left: 25, bottom: 0, right: 25))
-        registrationContainerStackView.addArrangedSubview(emailLabel)
-        registrationContainerStackView.addArrangedSubview(emailTextField)
-        registrationContainerStackView.addArrangedSubview(emailSeparatorView)
-        registrationContainerStackView.addArrangedSubview(passwordLabel)
-        registrationContainerStackView.addArrangedSubview(passwordTextField)
-        registrationContainerStackView.addArrangedSubview(passwordSeparatorView)
+        registrationContainerStackView.addArrangedSubviews([emailLabel,
+                                                            emailTextField,
+                                                            emailSeparatorView,
+                                                            passwordLabel,
+                                                            passwordTextField,
+                                                            passwordSeparatorView])
         registrationContainerStackView.alignment = .fill
         registrationContainerStackView.distribution = .equalSpacing
     }

@@ -50,16 +50,11 @@ final class RegistrationViewController: UIViewController {
 
     // MARK: - Setups
     private func setupView() {
-        view.addSubview(backgroundImageView)
-        view.addSubview(logoImageView)
-        view.addSubview(registrationContainerStackView)
-        view.addSubview(emailLabel)
-        view.addSubview(emailTextField)
-        view.addSubview(emailSeparatorView)
-        view.addSubview(passwordLabel)
-        view.addSubview(passwordTextField)
-        view.addSubview(passwordSeparatorView)
-        view.addSubview(registrationButton)
+        view.addSubviews([backgroundImageView, logoImageView,
+                          registrationContainerStackView, emailLabel,
+                          emailTextField, emailSeparatorView,
+                          passwordLabel, passwordTextField,
+                          passwordSeparatorView, registrationButton])
     }
 
     private func setupBackgroundImageView() {
@@ -83,10 +78,10 @@ final class RegistrationViewController: UIViewController {
         registrationContainerStackView.axis = .vertical
         registrationContainerStackView.heightAnchor.constraint(equalToConstant: 180).isActive = true
         registrationContainerStackView.anchor(top: logoImageView.bottomAnchor,
-                                  leading: view.leadingAnchor,
-                                  trailing: view.trailingAnchor,
-                                  bottom: nil,
-                                  padding: .init(top: 100, left: 25, bottom: 0, right: 25))
+                                              leading: view.leadingAnchor,
+                                              trailing: view.trailingAnchor,
+                                              bottom: nil,
+                                              padding: .init(top: 100, left: 25, bottom: 0, right: 25))
         registrationContainerStackView.addArrangedSubview(emailLabel)
         registrationContainerStackView.addArrangedSubview(emailTextField)
         registrationContainerStackView.addArrangedSubview(emailSeparatorView)

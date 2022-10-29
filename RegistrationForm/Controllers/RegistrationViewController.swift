@@ -14,14 +14,12 @@ final class RegistrationViewController: UIViewController {
     private let emailTextField = RegistrationUITextField(
         placeholder: "введите электронную почту",
         autocapitalizationType: .none,
-        keyboardType: .emailAddress
-    )
+        keyboardType: .emailAddress)
     private let passwordTextField = RegistrationUITextField(
         placeholder: "введите пароль",
         iconName: "view",
         autocapitalizationType: .words,
-        keyboardType: .default
-    )
+        keyboardType: .default)
 
     // UILabel
     private let emailLabel = RegistrationUILabel(text: "Email")
@@ -50,11 +48,12 @@ final class RegistrationViewController: UIViewController {
 
     // MARK: - Setups
     private func setupView() {
-        view.addSubviews([backgroundImageView, logoImageView,
-                          registrationContainerStackView, emailLabel,
-                          emailTextField, emailSeparatorView,
-                          passwordLabel, passwordTextField,
-                          passwordSeparatorView, registrationButton])
+        view.addSubviews([
+            backgroundImageView, logoImageView,
+            registrationContainerStackView, emailLabel,
+            emailTextField, emailSeparatorView,
+            passwordLabel, passwordTextField,
+            passwordSeparatorView, registrationButton])
     }
 
     private func setupBackgroundImageView() {
@@ -70,24 +69,25 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 100, left: 16, bottom: 0, right: 16)
-        )
+            padding: .init(top: 100, left: 16, bottom: 0, right: 16))
     }
 
     private func setupContainerStackView() {
         registrationContainerStackView.axis = .vertical
         registrationContainerStackView.heightAnchor.constraint(equalToConstant: 180).isActive = true
-        registrationContainerStackView.anchor(top: logoImageView.bottomAnchor,
-                                              leading: view.leadingAnchor,
-                                              trailing: view.trailingAnchor,
-                                              bottom: nil,
-                                              padding: .init(top: 100, left: 25, bottom: 0, right: 25))
-        registrationContainerStackView.addArrangedSubviews([emailLabel,
-                                                            emailTextField,
-                                                            emailSeparatorView,
-                                                            passwordLabel,
-                                                            passwordTextField,
-                                                            passwordSeparatorView])
+        registrationContainerStackView.anchor(
+            top: logoImageView.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 100, left: 25, bottom: 0, right: 25))
+        registrationContainerStackView.addArrangedSubviews([
+            emailLabel,
+            emailTextField,
+            emailSeparatorView,
+            passwordLabel,
+            passwordTextField,
+            passwordSeparatorView])
         registrationContainerStackView.alignment = .fill
         registrationContainerStackView.distribution = .equalSpacing
     }
@@ -98,7 +98,6 @@ final class RegistrationViewController: UIViewController {
             leading: view.leadingAnchor,
             trailing: view.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 40, left: 25, bottom: 0, right: 25)
-        )
+            padding: .init(top: 40, left: 25, bottom: 0, right: 25))
     }
 }

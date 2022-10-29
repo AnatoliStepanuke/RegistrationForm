@@ -11,9 +11,7 @@ final class GradientButton: UIButton {
     }
 
     // MARK: - Setups
-    private func setupConstraints() {
-        heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
+    private func setupConstraints() { heightAnchor.constraint(equalToConstant: 50).isActive = true }
 
     private func setupCornerRadius() {
         layer.cornerRadius = 6

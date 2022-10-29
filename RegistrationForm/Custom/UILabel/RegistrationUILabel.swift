@@ -13,18 +13,13 @@ final class RegistrationUILabel: UILabel {
         setupText(
             text: text,
             font: font,
-            textColor: textColor
-        )
+            textColor: textColor)
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     // MARK: - Setups
-    private func setupConstraints(height: CGFloat) {
-        heightAnchor.constraint(equalToConstant: height).isActive = true
-    }
+    private func setupConstraints(height: CGFloat) { heightAnchor.constraint(equalToConstant: height).isActive = true }
 
     private func setupText(
         text: String,

@@ -85,12 +85,8 @@ final class RegistrationViewController: UIViewController {
             bottom: nil,
             padding: .init(top: 100, left: 25, bottom: 0, right: 25))
         registrationContainerStackView.addArrangedSubviews([
-            emailLabel,
-            emailTextField,
-            emailSeparatorView,
-            passwordLabel,
-            passwordTextField,
-            passwordSeparatorView])
+            emailLabel, emailTextField, emailSeparatorView,
+            passwordLabel, passwordTextField, passwordSeparatorView])
     }
 
     private func setupRegistrationButton() {
@@ -100,5 +96,41 @@ final class RegistrationViewController: UIViewController {
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
             padding: .init(top: 40, left: 25, bottom: 0, right: 25))
+        registrationButton.addTarget(self, action: #selector(registrationButtonDidTapped), for: .touchUpInside)
+    }
+
+    // MARK: - Actions
+    // MARK: Objc Methods
+    @objc private func registrationButtonDidTapped() {
+        checkEmptyTextFields()
+    }
+
+    // MARK: - Helpers
+    private func checkEmptyTextFields() {
+        if emailTextField.text?.isEmpty ?? true && passwordTextField.text?.isEmpty ?? true {
+            showEmptyFieldsAlert()
+        } else if emailTextField.text?.isEmpty ?? true {
+            showEmailEmptyFieldAlert()
+        } else if passwordTextField.text?.isEmpty ?? true {
+            showPasswordEmptyFieldAlert()
+        } else {
+            showSuccessAlert()
+        }
+    }
+
+    private func showEmptyFieldsAlert() {
+        present(AlertManager.instance.showEmptyFieldsAlert(), animated: true, completion: nil)
+    }
+
+    private func showEmailEmptyFieldAlert() {
+        present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true, completion: nil)
+    }
+
+    private func showPasswordEmptyFieldAlert() {
+        present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true, completion: nil)
+    }
+
+    private func showSuccessAlert() {
+        present(AlertManager.instance.showSuccessAlert(), animated: true, completion: nil)
     }
 }

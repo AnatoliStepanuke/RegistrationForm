@@ -97,3 +97,4 @@ final class RegistrationViewController: UIViewController {
             padding: .init(top: 40, left: 25, bottom: 0, right: 25))
     }
 }
+

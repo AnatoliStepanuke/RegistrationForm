@@ -116,3 +116,4 @@ final class RegistrationViewController: UIViewController {
         }
     }
 }
+

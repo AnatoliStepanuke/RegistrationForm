@@ -101,36 +101,18 @@ final class RegistrationViewController: UIViewController {
 
     // MARK: - Actions
     // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() {
-        checkEmptyTextFields()
-    }
+    @objc private func registrationButtonDidTapped() { checkEmptyTextFields() }
 
     // MARK: - Helpers
     private func checkEmptyTextFields() {
         if emailTextField.text?.isEmpty ?? true && passwordTextField.text?.isEmpty ?? true {
-            showEmptyFieldsAlert()
+            present(AlertManager.instance.showEmptyFieldsAlert(), animated: true, completion: nil)
         } else if emailTextField.text?.isEmpty ?? true {
-            showEmailEmptyFieldAlert()
+            present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true, completion: nil)
         } else if passwordTextField.text?.isEmpty ?? true {
-            showPasswordEmptyFieldAlert()
+            present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true, completion: nil)
         } else {
-            showSuccessAlert()
+            present(AlertManager.instance.showSuccessAlert(), animated: true, completion: nil)
         }
-    }
-
-    private func showEmptyFieldsAlert() {
-        present(AlertManager.instance.showEmptyFieldsAlert(), animated: true, completion: nil)
-    }
-
-    private func showEmailEmptyFieldAlert() {
-        present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true, completion: nil)
-    }
-
-    private func showPasswordEmptyFieldAlert() {
-        present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true, completion: nil)
-    }
-
-    private func showSuccessAlert() {
-        present(AlertManager.instance.showSuccessAlert(), animated: true, completion: nil)
     }
 }

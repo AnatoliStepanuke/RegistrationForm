@@ -2,7 +2,7 @@ import UIKit
 
 final class RegistrationSeparatorView: UIView {
     // MARK: - Init
-    init(color: UIColor) {
+    init(color: UIColor = AppColors.whiteColor) {
         super.init(frame: .zero)
         setupHeight()
         setupColor(color: color)

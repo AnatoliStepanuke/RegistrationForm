@@ -2,10 +2,14 @@ import UIKit
 
 final class RegistrationUIStackView: UIStackView {
     // MARK: - Init
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    init() {
+        super.init(frame: .zero)
         setupHeight()
         setupDistribution()
+    }
+
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Setups

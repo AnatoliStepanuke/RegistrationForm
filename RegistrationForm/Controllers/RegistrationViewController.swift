@@ -106,14 +106,17 @@ final class RegistrationViewController: UIViewController {
     // MARK: - Helpers
     private func checkEmptyTextFields() {
         if emailTextField.text?.isEmpty ?? true && passwordTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showEmptyFieldsAlert(), animated: true, completion: nil)
+            present(AlertManager.instance.showEmptyFieldsAlert(), animated: true)
         } else if emailTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true, completion: nil)
+            present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true)
         } else if passwordTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true, completion: nil)
+            present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true)
+        } else if passwordTextField.text?.count ?? 0 < 6 {
+            present(AlertManager.instance.showMinLengthPasswordAlert(), animated: true)
+        } else if passwordTextField.text?.count ?? 0 > 15 {
+            present(AlertManager.instance.showMaxLengthPasswordAlert(), animated: true)
         } else {
-            present(AlertManager.instance.showSuccessAlert(), animated: true, completion: nil)
+            present(AlertManager.instance.showSuccessAlert(), animated: true)
         }
     }
 }
-

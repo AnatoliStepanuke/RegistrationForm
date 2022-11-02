@@ -21,23 +21,36 @@ final class AlertManager {
     }
 
     func showEmptyFieldsAlert() -> UIAlertController {
-        let alertEmptyFields = showAlert(title: "Attention", message: "Make sure you have filled all fields")
-        return alertEmptyFields
+        let emptyFieldsAlert = showAlert(title: "Attention", message: "Make sure you have filled all fields.")
+        return emptyFieldsAlert
     }
 
     func showEmailEmptyFieldAlert() -> UIAlertController {
-        let alertEmailField = showAlert(title: "Attention", message: "Make sure you have filled email field")
-        return alertEmailField
+        let emailFieldAlert = showAlert(title: "Attention", message: "Make sure you have filled email field.")
+        return emailFieldAlert
     }
 
     func showPasswordEmptyFieldAlert() -> UIAlertController {
-        let alertPasswordField = showAlert(title: "Attention", message: "Make sure you have filled password field")
-        return alertPasswordField
+        let passwordFieldAlert = showAlert(title: "Attention", message: "Make sure you have filled password field.")
+        return passwordFieldAlert
     }
 
     func showSuccessAlert() -> UIAlertController {
-        let alertPasswordField = showAlert(title: "Success!", message: "You're breathtaking")
-        return alertPasswordField
+        let alertSuccess = showAlert(title: "Success!", message: "You're breathtaking")
+        return alertSuccess
     }
 
+    func showMinLengthPasswordAlert() -> UIAlertController {
+        let minLengthPasswordAlert = showAlert(
+            title: "Attention",
+            message: "Enter password at least than 6 characters.")
+        return minLengthPasswordAlert
+    }
+
+    func showMaxLengthPasswordAlert() -> UIAlertController {
+        let maxLengthPasswordAlert = showAlert(
+            title: "Attention",
+            message: "Enter password 15 or less characters.")
+        return maxLengthPasswordAlert
+    }
 }

@@ -12,14 +12,15 @@ final class AlertManager {
     // MARK: - Init
     private init() { }
 
-    // MARK: - API
-    func showAlert(title: String, message: String) -> UIAlertController {
+    // MARK: - Helpers
+    private func showAlert(title: String, message: String) -> UIAlertController {
         serviceGranted = true
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alert
     }
 
+    // MARK: - API
     func showEmptyFieldsAlert() -> UIAlertController {
         let emptyFieldsAlert = showAlert(title: "Attention", message: "Make sure you have filled all fields.")
         return emptyFieldsAlert

@@ -26,12 +26,12 @@ final class AlertManager {
         return emptyFieldsAlert
     }
 
-    func showEmailEmptyFieldAlert() -> UIAlertController {
+    func showEmptyEmailFieldAlert() -> UIAlertController {
         let emailFieldAlert = showAlert(title: "Attention", message: "Make sure you have filled email field.")
         return emailFieldAlert
     }
 
-    func showPasswordEmptyFieldAlert() -> UIAlertController {
+    func showEmptyPasswordFieldAlert() -> UIAlertController {
         let passwordFieldAlert = showAlert(title: "Attention", message: "Make sure you have filled password field.")
         return passwordFieldAlert
     }

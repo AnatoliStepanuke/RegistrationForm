@@ -1,6 +1,6 @@
 import UIKit
 
-protocol RegistrationForm: TextFieldFormChecking {
+protocol RegistrationForm: RegistrationValidation {
     // RegistrationUITextField
     var emailTextField: RegistrationUITextField { get }
     var passwordTextField: RegistrationUITextField { get }

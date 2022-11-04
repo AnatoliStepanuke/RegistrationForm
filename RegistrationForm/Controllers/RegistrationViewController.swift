@@ -103,27 +103,7 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
 
     // MARK: - Actions
     // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() { textFieldFormChecking() }
-
-    // MARK: - Helpers
-    internal func textFieldFormChecking() {
-        let isEmailFieldEmpty = emailTextField.text?.isEmpty ?? true
-        let isPasswordFieldEmpty = passwordTextField.text?.isEmpty ?? true
-        let passwordMinLength = passwordTextField.text?.count ?? 0 < 6
-        let passwordMaxLength = passwordTextField.text?.count ?? 0 > 15
-
-        if isEmailFieldEmpty && isPasswordFieldEmpty {
-            present(AlertManager.instance.showEmptyFieldsAlert(), animated: true)
-        } else if isEmailFieldEmpty {
-            present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true)
-        } else if isPasswordFieldEmpty {
-            present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true)
-        } else if passwordMinLength {
-            present(AlertManager.instance.showMinLengthPasswordAlert(), animated: true)
-        } else if passwordMaxLength {
-            present(AlertManager.instance.showMaxLengthPasswordAlert(), animated: true)
-        } else {
-            present(AlertManager.instance.showSuccessAlert(), animated: true)
-        }
+    @objc private func registrationButtonDidTapped() {
+        registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 }

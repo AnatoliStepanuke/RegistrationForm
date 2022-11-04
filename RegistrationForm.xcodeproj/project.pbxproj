@@ -137,11 +137,8 @@
 		DC27D36A2904570300E35AD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */,
-				DCD53BD529097960002F36E2 /* UIView+gradient.swift */,
-				DC7F042B290D67290082A76F /* UIView+addingSubviews.swift */,
-				DC7F042D290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift */,
-				DC4152CA2915736400D7CF37 /* UIView+showAlert.swift */,
+				DC4152CD2915748200D7CF37 /* UIStackView */,
+				DC4152CC2915747300D7CF37 /* UIView */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +151,25 @@
 				DC4152C02913DE2A00D7CF37 /* RegistrationValidation.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DC4152CC2915747300D7CF37 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DC7F042B290D67290082A76F /* UIView+addingSubviews.swift */,
+				DC27D36B2904571C00E35AD0 /* UIView+constraints.swift */,
+				DCD53BD529097960002F36E2 /* UIView+gradient.swift */,
+				DC4152CA2915736400D7CF37 /* UIView+showAlert.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		DC4152CD2915748200D7CF37 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				DC7F042D290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift */,
+			);
+			path = UIStackView;
 			sourceTree = "<group>";
 		};
 		DC5418632908447300D727BC /* Custom */ = {

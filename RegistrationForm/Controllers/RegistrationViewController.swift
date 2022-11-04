@@ -1,7 +1,8 @@
 import UIKit
 
-final class RegistrationViewController: UIViewController {
+final class RegistrationViewController: UIViewController, RegistrationForm {
     // MARK: - Constants
+    // MARK: Private
     // UIImage
     private let backgroundImage = UIImage(named: "backgroundImage")
     private let logoImage = UIImage(named: "logoImage")
@@ -10,30 +11,31 @@ final class RegistrationViewController: UIViewController {
     private let backgroundImageView = UIImageView()
     private let logoImageView = UIImageView()
 
+    // MARK: Internal
     // UITextField
-    private let emailTextField = RegistrationUITextField(
+    internal let emailTextField = RegistrationUITextField(
         placeholder: "введите электронную почту",
         autocapitalizationType: .none,
         keyboardType: .emailAddress)
-    private let passwordTextField = RegistrationUITextField(
+    internal let passwordTextField = RegistrationUITextField(
         placeholder: "введите пароль",
         iconName: "view",
         autocapitalizationType: .words,
         keyboardType: .default)
 
     // UILabel
-    private let emailLabel = RegistrationUILabel(text: "Email")
-    private let passwordLabel = RegistrationUILabel(text: "Пароль")
+    internal let emailLabel = RegistrationUILabel(text: "Email")
+    internal let passwordLabel = RegistrationUILabel(text: "Пароль")
 
     // UIButton
-    private let registrationButton = RegistrationUIButton()
+    internal let registrationButton = RegistrationUIButton()
 
     // UIView
-    private let emailSeparatorView = RegistrationSeparatorView()
-    private let passwordSeparatorView = RegistrationSeparatorView()
+    internal let emailSeparatorView = RegistrationSeparatorView()
+    internal let passwordSeparatorView = RegistrationSeparatorView()
 
     // UIStackView
-    private let registrationContainerStackView = RegistrationUIStackView()
+    internal let registrationContainerStackView = RegistrationUIStackView()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -101,18 +103,7 @@ final class RegistrationViewController: UIViewController {
 
     // MARK: - Actions
     // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() { checkEmptyTextFields() }
-
-    // MARK: - Helpers
-    private func checkEmptyTextFields() {
-        if emailTextField.text?.isEmpty ?? true && passwordTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showEmptyFieldsAlert(), animated: true, completion: nil)
-        } else if emailTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showEmailEmptyFieldAlert(), animated: true, completion: nil)
-        } else if passwordTextField.text?.isEmpty ?? true {
-            present(AlertManager.instance.showPasswordEmptyFieldAlert(), animated: true, completion: nil)
-        } else {
-            present(AlertManager.instance.showSuccessAlert(), animated: true, completion: nil)
-        }
+    @objc private func registrationButtonDidTapped() {
+        registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 }

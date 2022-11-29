@@ -107,4 +107,3 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 }
-

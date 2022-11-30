@@ -1,6 +1,11 @@
 import UIKit
 
-final class RegistrationViewController: UIViewController, RegistrationForm {
+protocol RegistrationView: AnyObject {
+    func setTargetRegistrationButton() -> RegistrationUIButton
+    func setRegistrationValidation()
+}
+
+final class RegistrationScreenView: UIViewController {
     // MARK: - Constants
     // MARK: Private
     // UIImage
@@ -13,31 +18,42 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
 
     // MARK: Internal
     // UITextField
-    internal let emailTextField = RegistrationUITextField(
+    let emailTextField = RegistrationUITextField(
         placeholder: "введите электронную почту",
         autocapitalizationType: .none,
         keyboardType: .emailAddress)
-    internal let passwordTextField = RegistrationUITextField(
+    let passwordTextField = RegistrationUITextField(
         placeholder: "введите пароль",
         iconName: "view",
         autocapitalizationType: .words,
         keyboardType: .default)
 
     // UILabel
-    internal let emailLabel = RegistrationUILabel(text: "Email")
-    internal let passwordLabel = RegistrationUILabel(text: "Пароль")
+    let emailLabel = RegistrationUILabel(text: "Email")
+    let passwordLabel = RegistrationUILabel(text: "Пароль")
 
     // UIButton
-    internal let registrationButton = RegistrationUIButton()
+    let registrationButton = RegistrationUIButton()
 
     // UIView
-    internal let emailSeparatorView = RegistrationSeparatorView()
-    internal let passwordSeparatorView = RegistrationSeparatorView()
+    let emailSeparatorView = RegistrationSeparatorView()
+    let passwordSeparatorView = RegistrationSeparatorView()
 
     // UIStackView
-    internal let registrationContainerStackView = RegistrationUIStackView()
+    let registrationContainerStackView = RegistrationUIStackView()
+
+    // MARK: - Init
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Properties
+    var registrationPresenter: RegistrationPresenter?
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +76,8 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
             passwordLabel,
             passwordTextField,
             passwordSeparatorView,
-            registrationButton])
+            registrationButton
+        ])
     }
 
     private func setupBackgroundImageView() {
@@ -76,7 +93,8 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 100, left: 16, bottom: 0, right: 16))
+            padding: .init(top: 100, left: 16, bottom: 0, right: 16)
+        )
     }
 
     private func setupContainerStackView() {
@@ -85,10 +103,12 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 100, left: 25, bottom: 0, right: 25))
+            padding: .init(top: 100, left: 25, bottom: 0, right: 25)
+        )
         registrationContainerStackView.addArrangedSubviews([
             emailLabel, emailTextField, emailSeparatorView,
-            passwordLabel, passwordTextField, passwordSeparatorView])
+            passwordLabel, passwordTextField, passwordSeparatorView
+        ])
     }
 
     private func setupRegistrationButton() {
@@ -97,13 +117,19 @@ final class RegistrationViewController: UIViewController, RegistrationForm {
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 40, left: 25, bottom: 0, right: 25))
-        registrationButton.addTarget(self, action: #selector(registrationButtonDidTapped), for: .touchUpInside)
+            padding: .init(top: 40, left: 25, bottom: 0, right: 25)
+        )
+        if let registrationPresenter = registrationPresenter {
+            registrationPresenter.checkRegistrationForm()
+        }
     }
+}
 
-    // MARK: - Actions
-    // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() {
+extension RegistrationScreenView: RegistrationView, RegistrationForm {
+    // MARK: - API
+    func setTargetRegistrationButton() -> RegistrationUIButton { return registrationButton }
+
+    func setRegistrationValidation() {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 }

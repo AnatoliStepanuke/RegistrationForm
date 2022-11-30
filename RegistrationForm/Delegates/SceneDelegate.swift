@@ -5,7 +5,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     // MARK: - Constants
-    private let rootViewController = RegistrationViewController()
+    private let navigationController = UINavigationController()
+    private let view = RegistrationScreenView()
 
     // MARK: - UIScene
     func scene(
@@ -13,19 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController
+        window = UIWindow(windowScene: windowScene)
+        let presenter = RegistrationScreenPresenter(registrationView: view)
+        view.registrationPresenter = presenter
+        navigationController.pushViewController(view, animated: true)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        window?.windowScene = windowScene
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) { }
-
-    func sceneDidBecomeActive(_ scene: UIScene) { }
-
-    func sceneWillResignActive(_ scene: UIScene) { }
-
-    func sceneWillEnterForeground(_ scene: UIScene) { }
-
-    func sceneDidEnterBackground(_ scene: UIScene) { }
 }

@@ -5,7 +5,7 @@ protocol RegistrationView: AnyObject {
     func setRegistrationValidation()
 }
 
-final class RegistrationScreenView: UIViewController, RegistrationForm {
+final class RegistrationScreenView: UIViewController {
     // MARK: - Constants
     // MARK: Private
     // UIImage
@@ -125,11 +125,9 @@ final class RegistrationScreenView: UIViewController, RegistrationForm {
     }
 }
 
-extension RegistrationScreenView: RegistrationView {
+extension RegistrationScreenView: RegistrationView, RegistrationForm {
     // MARK: - API
-    func setTargetRegistrationButton() -> RegistrationUIButton {
-        return registrationButton
-    }
+    func setTargetRegistrationButton() -> RegistrationUIButton { return registrationButton }
 
     func setRegistrationValidation() {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)

@@ -1,7 +1,7 @@
 import Foundation
 
-protocol RegistrationPresenter: AnyObject {
-
+protocol RegistrationPresenter {
+    func checkRegistrationForm()
 }
 
 final class RegistrationScreenPresenter: RegistrationPresenter {
@@ -15,4 +15,17 @@ final class RegistrationScreenPresenter: RegistrationPresenter {
     }
 
     // MARK: - API
+    func checkRegistrationForm() {
+        registrationView.setTargetRegistrationButton().addTarget(
+            self,
+            action: #selector(registrationButtonDidTapped),
+            for: .touchUpInside
+        )
+    }
+
+    // MARK: - Actions
+    // MARK: Objc Methods
+    @objc private func registrationButtonDidTapped() {
+        registrationView.setRegistrationValidation()
+    }
 }

@@ -7,4 +7,5 @@ protocol RegistrationAlerts {
     func showSuccessAlert()
     func showMinLengthPasswordAlert()
     func showMaxLengthPasswordAlert()
+    func showEmailIsNotValidAlert()
 }

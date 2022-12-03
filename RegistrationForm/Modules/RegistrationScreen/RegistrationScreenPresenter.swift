@@ -10,9 +10,7 @@ final class RegistrationScreenPresenter: RegistrationPresenter {
 
     // MARK: - Properties
     // MARK: - Init
-    init(registrationView: RegistrationView) {
-        self.registrationView = registrationView
-    }
+    init(registrationView: RegistrationView) { self.registrationView = registrationView }
 
     // MARK: - API
     func checkRegistrationForm() {
@@ -25,7 +23,5 @@ final class RegistrationScreenPresenter: RegistrationPresenter {
 
     // MARK: - Actions
     // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() {
-        registrationView.setRegistrationValidation()
-    }
+    @objc private func registrationButtonDidTapped() { registrationView.setRegistrationValidation() }
 }

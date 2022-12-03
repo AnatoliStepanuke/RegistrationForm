@@ -42,4 +42,18 @@ final class AlertManager {
             message: "Enter password 15 or less characters.")
         return maxLengthPasswordAlert
     }
+
+    func showEmailIsNotValidAlert() -> UIAlertController {
+        let emailIsNotValid = showAlert(
+            title: "Attention",
+            message:
+            """
+            Email address is not valid.
+            Email must contains only upper or bottom letters, at and point symbols.
+            The domain name is no less than 2 and no longer than 3 characters.
+            Example: user@mail.com
+            """
+        )
+        return emailIsNotValid
+    }
 }

@@ -5,11 +5,13 @@ protocol RegistrationValidation: RegistrationAlerts {
 }
 
 extension RegistrationValidation {
+    // MARK: - API
     func registrationValidation(emailTextField: RegistrationUITextField, passwordTextField: RegistrationUITextField) {
-        privateRegistrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
+        checkRegistrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 
-    private func privateRegistrationValidation(
+    // MARK: - Helpers
+    private func checkRegistrationValidation(
         emailTextField: RegistrationUITextField,
         passwordTextField: RegistrationUITextField
     ) {
@@ -17,6 +19,8 @@ extension RegistrationValidation {
             showEmptyFieldsAlert()
         } else if emailTextField.text?.isEmpty ?? true {
             showEmptyEmailFieldAlert()
+        } else if emailTextField.isEmailValidate() == false {
+            showEmailIsNotValidAlert()
         } else if passwordTextField.text?.isEmpty ?? true {
             showEmptyPasswordFieldAlert()
         } else if passwordTextField.text?.count ?? 0 < 6 {

@@ -3,6 +3,7 @@ import UIKit
 protocol RegistrationView: AnyObject {
     func setTargetRegistrationButton() -> RegistrationUIButton
     func setRegistrationValidation()
+    func setEmailValidation() -> String
 }
 
 final class RegistrationScreenView: UIViewController {
@@ -131,5 +132,12 @@ extension RegistrationScreenView: RegistrationView, RegistrationForm {
 
     func setRegistrationValidation() {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
+    }
+
+    func setEmailValidation() -> String {
+        guard let emailText = emailTextField.text else {
+            fatalError("email text not found")
+        }
+        return emailText
     }
 }

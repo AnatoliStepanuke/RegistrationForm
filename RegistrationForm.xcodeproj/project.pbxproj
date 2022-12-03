@@ -18,6 +18,7 @@
 		DC4152CB2915736400D7CF37 /* UIView+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4152CA2915736400D7CF37 /* UIView+showAlert.swift */; };
 		DC4BEE69293685FA00404C6C /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BEE68293685FA00404C6C /* RegistrationScreenView.swift */; };
 		DC4BEE6B2936861500404C6C /* RegistrationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BEE6A2936861500404C6C /* RegistrationScreenPresenter.swift */; };
+		DC4BEE6F293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BEE6E293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift */; };
 		DC54186029083FA800D727BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54185F29083FA800D727BC /* Colors.swift */; };
 		DC5418622908412300D727BC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5418612908412300D727BC /* Fonts.swift */; };
 		DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC541865290844A600D727BC /* RegistrationUITextField.swift */; };
@@ -45,6 +46,7 @@
 		DC4152CA2915736400D7CF37 /* UIView+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+showAlert.swift"; sourceTree = "<group>"; };
 		DC4BEE68293685FA00404C6C /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
 		DC4BEE6A2936861500404C6C /* RegistrationScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenPresenter.swift; sourceTree = "<group>"; };
+		DC4BEE6E293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationUITextField+isEmailValidate.swift"; sourceTree = "<group>"; };
 		DC54185F29083FA800D727BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC5418612908412300D727BC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		DC541865290844A600D727BC /* RegistrationUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITextField.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		DC27D36A2904570300E35AD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC4BEE6D293B93A200404C6C /* RegistrationUITextField */,
 				DC4152CD2915748200D7CF37 /* UIStackView */,
 				DC4152CC2915747300D7CF37 /* UIView */,
 			);
@@ -181,6 +184,14 @@
 				DC4BEE6A2936861500404C6C /* RegistrationScreenPresenter.swift */,
 			);
 			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		DC4BEE6D293B93A200404C6C /* RegistrationUITextField */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BEE6E293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift */,
+			);
+			path = RegistrationUITextField;
 			sourceTree = "<group>";
 		};
 		DC5418632908447300D727BC /* Custom */ = {
@@ -350,6 +361,7 @@
 				DC4BEE69293685FA00404C6C /* RegistrationScreenView.swift in Sources */,
 				DC27D36C2904571C00E35AD0 /* UIView+constraints.swift in Sources */,
 				DC4152C92915731C00D7CF37 /* RegistrationAlerts.swift in Sources */,
+				DC4BEE6F293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift in Sources */,
 				DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */,
 				DC7F042E290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift in Sources */,
 				DCD53BD629097960002F36E2 /* UIView+gradient.swift in Sources */,

@@ -43,13 +43,9 @@ final class RegistrationScreenView: UIViewController {
     let registrationContainerStackView = RegistrationUIStackView()
 
     // MARK: - Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
+    init() { super.init(nibName: nil, bundle: nil) }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     // MARK: - Properties
     var registrationPresenter: RegistrationPresenter?

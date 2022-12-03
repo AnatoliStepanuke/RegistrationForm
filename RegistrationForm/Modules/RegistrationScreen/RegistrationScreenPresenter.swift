@@ -10,9 +10,7 @@ final class RegistrationScreenPresenter: RegistrationPresenter {
 
     // MARK: - Properties
     // MARK: - Init
-    init(registrationView: RegistrationView) {
-        self.registrationView = registrationView
-    }
+    init(registrationView: RegistrationView) { self.registrationView = registrationView }
 
     // MARK: - API
     func checkRegistrationForm() {

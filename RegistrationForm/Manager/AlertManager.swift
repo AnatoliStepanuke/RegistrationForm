@@ -42,4 +42,12 @@ final class AlertManager {
             message: "Enter password 15 or less characters.")
         return maxLengthPasswordAlert
     }
+
+    func showEmailIsNotValidAlert() -> UIAlertController {
+        let emailIsNotValid = showAlert(
+            title: "Attention",
+            message: "Email is not valid. Try write another email."
+        )
+        return emailIsNotValid
+    }
 }

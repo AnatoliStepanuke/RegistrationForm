@@ -23,21 +23,7 @@ final class RegistrationScreenPresenter: RegistrationPresenter {
         )
     }
 
-    // MARK: - Helpers
-    private func validateEmail(enteredEmail: String) -> Bool {
-        let emailFormat = "[A-Za-z.]+@[A-Za-z.]+.[A-Za-z]{2,3}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailFormat)
-        return emailPredicate.evaluate(with: enteredEmail)
-    }
-
     // MARK: - Actions
     // MARK: Objc Methods
-    @objc private func registrationButtonDidTapped() {
-        registrationView.setRegistrationValidation()
-        if validateEmail(enteredEmail: registrationView.setEmailValidation()) == true {
-            print("email is valid")
-        } else {
-            print("email is not valid")
-        }
-    }
+    @objc private func registrationButtonDidTapped() { registrationView.setRegistrationValidation() }
 }

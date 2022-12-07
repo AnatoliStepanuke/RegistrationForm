@@ -8,7 +8,7 @@ protocol RegistrationView: AnyObject {
 final class RegistrationScreenView: UIViewController {
     // MARK: - Constants
     // MARK: Private
-    let suggestionsArray = [
+    let emailDomains = [
         "aol.com", "gmail.com",
         "yandex.com", "msn.com",
         "outlook.com", "icloud.com",
@@ -144,10 +144,10 @@ extension RegistrationScreenView: UITextFieldDelegate {
         shouldChangeCharactersIn range: NSRange,
         replacementString string: String
     ) -> Bool {
-        return !autoCompleteText(in: textField, using: string, suggestionsArray: suggestionsArray)
+        return !autoCompleteText(in: textField, using: string, arraySuggestions: emailDomains)
     }
 
-    func autoCompleteText(in textField: UITextField, using string: String, suggestionsArray: [String]) -> Bool {
+    func autoCompleteText(in textField: UITextField, using string: String, arraySuggestions: [String]) -> Bool {
         var stringMatch: String = ""
         if !string.isEmpty,
            let selectedTextRange = textField.selectedTextRange,
@@ -155,7 +155,7 @@ extension RegistrationScreenView: UITextFieldDelegate {
            let prefixRange = textField.textRange(from: textField.endOfDocument, to: selectedTextRange.start),
            let text = textField.text(in: prefixRange) {
             let prefix = text + string
-            let matches = suggestionsArray.filter {
+            let matches = arraySuggestions.filter {
                 $0.hasPrefix(prefix)
             }
             if matches.count > 0 {
@@ -163,7 +163,7 @@ extension RegistrationScreenView: UITextFieldDelegate {
                 textField.text?.append(stringMatch)
                 if let start = textField.position(
                     from: textField.beginningOfDocument,
-                    offset: textField.text!.count - stringMatch.count + 1
+                    offset: (textField.text?.count ?? 0) - stringMatch.count + 1
                 ) {
                     textField.selectedTextRange = textField.textRange(from: start, to: textField.endOfDocument)
                     return true

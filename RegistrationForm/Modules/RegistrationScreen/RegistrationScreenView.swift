@@ -178,3 +178,4 @@ extension RegistrationScreenView: UITextFieldDelegate {
         return true
     }
 }
+

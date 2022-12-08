@@ -182,8 +182,8 @@
 		DC4BEE67293685C500404C6C /* RegistrationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DC4BEE68293685FA00404C6C /* RegistrationScreenView.swift */,
 				DC4BEE6A2936861500404C6C /* RegistrationScreenPresenter.swift */,
+				DC4BEE68293685FA00404C6C /* RegistrationScreenView.swift */,
 			);
 			path = RegistrationScreen;
 			sourceTree = "<group>";
@@ -191,8 +191,8 @@
 		DC4BEE6D293B93A200404C6C /* RegistrationUITextField */ = {
 			isa = PBXGroup;
 			children = (
-				DC4BEE6E293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift */,
 				DC4BEE70293B9F7B00404C6C /* RegistrationUITextField+Constants.swift */,
+				DC4BEE6E293B93D600404C6C /* RegistrationUITextField+isEmailValidate.swift */,
 			);
 			path = RegistrationUITextField;
 			sourceTree = "<group>";

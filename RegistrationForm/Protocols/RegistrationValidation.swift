@@ -15,20 +15,20 @@ extension RegistrationValidation {
         emailTextField: RegistrationUITextField,
         passwordTextField: RegistrationUITextField
     ) {
-        if emailTextField.text?.isEmpty ?? true && passwordTextField.text?.isEmpty ?? true {
-            showEmptyFieldsAlert()
-        } else if emailTextField.text?.isEmpty ?? true {
-            showEmptyEmailFieldAlert()
-        } else if emailTextField.isEmailValidate() == false {
-            showEmailIsNotValidAlert()
-        } else if passwordTextField.text?.isEmpty ?? true {
-            showEmptyPasswordFieldAlert()
-        } else if passwordTextField.text?.count ?? 0 < 6 {
-            showMinLengthPasswordAlert()
-        } else if passwordTextField.text?.count ?? 0 > 15 {
-            showMaxLengthPasswordAlert()
-        } else {
-            showSuccessAlert()
+        switch (
+            emailTextField.text?.isEmpty,
+            passwordTextField.text?.isEmpty,
+            emailTextField.isEmailValidate(),
+            passwordTextField.text?.count ?? 0 < 6,
+            passwordTextField.text?.count ?? 0 > 15
+        ) {
+        case (true, true, _, _, _): showEmptyFieldsAlert()
+        case(true, false, _, _, _): showEmptyEmailFieldAlert()
+        case (false, true, _, _, _): showEmptyPasswordFieldAlert()
+        case (_, _, false, _, _): showEmailIsNotValidAlert()
+        case(_, _, _, true, _): showMinLengthPasswordAlert()
+        case(_, _, _, _, true): showMaxLengthPasswordAlert()
+        case (_, _, _, _, _): showSuccessAlert()
         }
     }
 }

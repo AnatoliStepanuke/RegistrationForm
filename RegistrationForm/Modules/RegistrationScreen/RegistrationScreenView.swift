@@ -3,6 +3,7 @@ import UIKit
 protocol RegistrationView: AnyObject {
     func setTargetRegistrationButton() -> RegistrationUIButton
     func setRegistrationValidation()
+    func setEmailDomains() -> [String]
 }
 
 final class RegistrationScreenView: UIViewController {
@@ -136,6 +137,8 @@ extension RegistrationScreenView: RegistrationView, RegistrationForm {
     func setRegistrationValidation() {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
+
+    func setEmailDomains() -> [String] { return emailDomains }
 }
 
 extension RegistrationScreenView: UITextFieldDelegate {
@@ -144,38 +147,14 @@ extension RegistrationScreenView: UITextFieldDelegate {
         shouldChangeCharactersIn range: NSRange,
         replacementString string: String
     ) -> Bool {
-        return !autoCompleteText(in: textField, using: string, arraySuggestions: emailDomains)
-    }
-
-    func autoCompleteText(in textField: UITextField, using string: String, arraySuggestions: [String]) -> Bool {
-        var stringMatch: String = ""
-        if !string.isEmpty,
-           let selectedTextRange = textField.selectedTextRange,
-           selectedTextRange.end == textField.endOfDocument,
-           let prefixRange = textField.textRange(from: textField.endOfDocument, to: selectedTextRange.start),
-           let text = textField.text(in: prefixRange) {
-            let prefix = text + string
-            let matches = arraySuggestions.filter {
-                $0.hasPrefix(prefix)
-            }
-            if matches.count > 0 {
-                stringMatch = matches[0]
-                textField.text?.append(stringMatch)
-                if let start = textField.position(
-                    from: textField.beginningOfDocument,
-                    offset: (textField.text?.count ?? 0) - stringMatch.count + 1
-                ) {
-                    textField.selectedTextRange = textField.textRange(from: start, to: textField.endOfDocument)
-                    return true
-                }
-            }
+        guard let registrationPresenter = registrationPresenter else {
+            fatalError("registrationPresenter in not found.")
         }
-        return false
+        return !registrationPresenter.emailDomainAutocomplete(textField: textField, string: string)
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 }
-

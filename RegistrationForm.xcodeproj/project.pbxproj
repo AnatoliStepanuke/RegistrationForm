@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0ED96F29460F3200A6FBC5 /* RegistrationScreenView+EmailDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0ED96E29460F3200A6FBC5 /* RegistrationScreenView+EmailDomains.swift */; };
+		DC0ED9712946106A00A6FBC5 /* RegistrationScreenView+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0ED9702946106A00A6FBC5 /* RegistrationScreenView+UITextFieldDelegate.swift */; };
 		DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D3512902BE2C00E35AD0 /* AppDelegate.swift */; };
 		DC27D3542902BE2C00E35AD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27D3532902BE2C00E35AD0 /* SceneDelegate.swift */; };
 		DC27D35B2902BE2E00E35AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27D35A2902BE2E00E35AD0 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0ED96E29460F3200A6FBC5 /* RegistrationScreenView+EmailDomains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationScreenView+EmailDomains.swift"; sourceTree = "<group>"; };
+		DC0ED9702946106A00A6FBC5 /* RegistrationScreenView+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationScreenView+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		DC27D34E2902BE2C00E35AD0 /* RegistrationForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC27D3512902BE2C00E35AD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC27D3532902BE2C00E35AD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC0ED96D29460F0B00A6FBC5 /* RegistrationScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				DC0ED96E29460F3200A6FBC5 /* RegistrationScreenView+EmailDomains.swift */,
+				DC0ED9702946106A00A6FBC5 /* RegistrationScreenView+UITextFieldDelegate.swift */,
+			);
+			path = RegistrationScreenView;
+			sourceTree = "<group>";
+		};
 		DC27D3452902BE2C00E35AD0 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 		DC27D36A2904570300E35AD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC0ED96D29460F0B00A6FBC5 /* RegistrationScreenView */,
 				DC4BEE6D293B93A200404C6C /* RegistrationUITextField */,
 				DC4152CD2915748200D7CF37 /* UIStackView */,
 				DC4152CC2915747300D7CF37 /* UIView */,
@@ -326,6 +340,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		DC27D3692902EC2C00E35AD0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -339,7 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -356,6 +371,7 @@
 				DC4BEE6B2936861500404C6C /* RegistrationScreenPresenter.swift in Sources */,
 				DC27D3522902BE2C00E35AD0 /* AppDelegate.swift in Sources */,
 				DC4152CB2915736400D7CF37 /* UIView+showAlert.swift in Sources */,
+				DC0ED96F29460F3200A6FBC5 /* RegistrationScreenView+EmailDomains.swift in Sources */,
 				DC7F042C290D67290082A76F /* UIView+addingSubviews.swift in Sources */,
 				DC4152C32913DEA100D7CF37 /* RegistrationForm.swift in Sources */,
 				DC7F0431290D85C20082A76F /* RegistrationUIStackView.swift in Sources */,
@@ -369,6 +385,7 @@
 				DC541866290844A600D727BC /* RegistrationUITextField.swift in Sources */,
 				DC7F042E290D68EC0082A76F /* UIStackView+addingArrangedSubviews.swift in Sources */,
 				DCD53BD629097960002F36E2 /* UIView+gradient.swift in Sources */,
+				DC0ED9712946106A00A6FBC5 /* RegistrationScreenView+UITextFieldDelegate.swift in Sources */,
 				DC4152C12913DE2A00D7CF37 /* RegistrationValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

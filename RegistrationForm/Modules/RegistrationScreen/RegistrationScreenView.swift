@@ -9,13 +9,6 @@ protocol RegistrationView: AnyObject {
 final class RegistrationScreenView: UIViewController {
     // MARK: - Constants
     // MARK: Private
-    let emailDomains = [
-        "aol.com", "gmail.com",
-        "yandex.com", "msn.com",
-        "outlook.com", "icloud.com",
-        "protonmail.com", "zoho.com"
-    ]
-
     // UIImage
     private let backgroundImage = UIImage(named: "backgroundImage")
     private let logoImage = UIImage(named: "logoImage")
@@ -138,7 +131,7 @@ extension RegistrationScreenView: RegistrationView, RegistrationForm {
         registrationValidation(emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 
-    func setEmailDomains() -> [String] { return emailDomains }
+    func setEmailDomains() -> [String] { return EmailDomains.emailDomains }
 }
 
 extension RegistrationScreenView: UITextFieldDelegate {
@@ -152,7 +145,7 @@ extension RegistrationScreenView: UITextFieldDelegate {
         }
         return !registrationPresenter.emailDomainAutocomplete(textField: textField, string: string)
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

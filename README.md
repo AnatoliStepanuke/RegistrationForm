@@ -1,5 +1,5 @@
 # RegistrationForm
-Creating UX for users which are entering their email address and password when registering in the app according design in [Zeplin](https://scene.zeplin.io/project/5b06921e90d3b184214007ac).
+Creating UX for users which are entering their email address, password and passes registration form according design in [Zeplin](https://scene.zeplin.io/project/5b06921e90d3b184214007ac).
 
 ## Technologies
 + UIKit

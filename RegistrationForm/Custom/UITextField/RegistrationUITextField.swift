@@ -46,7 +46,7 @@ final class RegistrationUITextField: UITextField {
         self.font = font
         attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4]
+            attributes: [NSAttributedString.Key.foregroundColor: AppColors.lightTealColor]
         )
         self.textColor = textColor
     }
